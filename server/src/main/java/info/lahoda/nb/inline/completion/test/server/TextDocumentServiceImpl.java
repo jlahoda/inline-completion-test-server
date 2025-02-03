@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.DidOpenTextDocumentParams;
 import org.eclipse.lsp4j.DidSaveTextDocumentParams;
 import org.eclipse.lsp4j.Position;
 import org.eclipse.lsp4j.TextDocumentIdentifier;
-import org.eclipse.lsp4j.TextDocumentPositionParams;
 import org.eclipse.lsp4j.jsonrpc.services.JsonRequest;
 import org.eclipse.lsp4j.services.TextDocumentService;
 
@@ -57,7 +56,7 @@ public class TextDocumentServiceImpl implements TextDocumentService {
             URI sourceFile = URI.create(sourceURIText);
             URI targetFile = URI.create(sourceURIText.replace("server-test/work", "server-test/clean"));
 
-            String sourceCode = params.getText();//url2Content.get(params.getTextDocument().getUri());
+            String sourceCode = url2Content.get(params.getTextDocument().getUri());
 
             if (sourceCode == null) {
                 sourceCode = readTextContent(sourceFile);
