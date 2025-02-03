@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: info.lahoda.nb.inline.completion.test.server.integration
+OpenIDE-Module-Localizing-Bundle: info/lahoda/nb/inline/completion/test/server/integration/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
